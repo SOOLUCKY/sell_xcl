@@ -2,7 +2,9 @@
   <div id="app">
     <header></header>
     <div class="tab">
-      I am tab
+      <div class="tab-item">商品</div>
+      <div class="tab-item">评论</div>
+      <div class="tab-item">商家</div>
     </div>
     <div class="content">
       I am content
@@ -11,14 +13,25 @@
 </template>
 
 <script>
- import header from './components/header/header';
- export default {
-   components: {
-     header
-   }
- };
+  import header from './components/header/header';
+
+  export default {
+    components: {
+      'v-header': header
+    }
+  };
 </script>
 
-<style>
+<style lang="stylus" rel="stylesheet/stylus">
+  #app
+    .tab
+      display: flex
+      width: 100%
+      height: 40px
+      line-height: 40px
 
+      .tab-item
+        flex: 1
+        text-align: center
 </style>
+
